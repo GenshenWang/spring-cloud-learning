@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: shop-order-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: true
+        # prefix/default-context/data-key 对应在 Consul中创建的配置目录
+        prefix: config
+        default-context: ${spring.application.name}
+        # 可以指定data-key, 默认为data; 一般不用指定
+        # data-key: PAY_SUCCESS_MSG
+        # format 有4种格式:KEY_VALUE、PROPERTIES、YAML、FILES, KEY_VALUE 就是键值对形式
+        format: KEY_VALUE

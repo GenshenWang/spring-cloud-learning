@@ -1,0 +1,12 @@
+spring:
+ cloud:
+  consul:
+   discovery:
+   hostname: localhost
+   port: 8500
+   health-check-path: /actuator
+   health-check-interval: 10s
+   health-check-timeout: 30s
+   enabled: true
+server:
+ port: 9090
