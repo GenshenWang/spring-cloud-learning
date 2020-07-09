@@ -1,6 +1,7 @@
 package com.wgs.erueka.client.provider.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.serviceregistry.Registration;
@@ -27,6 +28,9 @@ public class EurekaClientHelloController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
+    @Value("${server.port}")
+    private Integer port;
+
     @Autowired
     private Registration registration;
 
@@ -39,7 +43,7 @@ public class EurekaClientHelloController {
 
         logger.info("获取服务实例:" + instanceInfos);
 
-        return "Hello Eureka Client";
+        return "Hello Eureka Client, port=" + port;
     }
 
 }
