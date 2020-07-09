@@ -19,3 +19,6 @@
 
 (2) Consul 配置中心
  * 模块 <a href="https://github.com/GenshenWang/spring-cloud-learning/tree/master/spring-cloud-consul-config">spring-cloud-consul-config</a>: 实现Consul配置中心
+
+ ### Spring Cloud Ribbon
+ Eureka + Ribbon实现负载均衡, 代码见:<a href="https://github.com/GenshenWang/spring-cloud-learning/tree/master/spring-cloud-ribbon-consumer">代码链接</a>
