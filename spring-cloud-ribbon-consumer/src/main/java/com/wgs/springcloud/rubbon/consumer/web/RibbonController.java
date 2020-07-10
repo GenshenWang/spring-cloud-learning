@@ -21,4 +21,10 @@ public class RibbonController {
 
         return restTemplate.getForEntity("http://eureka-client-provider/hello", String.class).getBody();
     }
+
+    @GetMapping("/ribbon/retry")
+    public String retry() {
+
+        return restTemplate.getForEntity("http://eureka-client-provider/retry", String.class).getBody();
+    }
 }
